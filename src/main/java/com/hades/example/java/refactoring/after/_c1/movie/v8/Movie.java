@@ -1,7 +1,7 @@
 package com.hades.example.java.refactoring.after._c1.movie.v8;
 
-import com.hades.example.java.refactoring.after._c1.movie.v8.price.Price;
 import com.hades.example.java.refactoring.after._c1.movie.v8.price.ChildrenPrice;
+import com.hades.example.java.refactoring.after._c1.movie.v8.price.Price;
 import com.hades.example.java.refactoring.after._c1.movie.v8.price.NewReleasePrice;
 import com.hades.example.java.refactoring.after._c1.movie.v8.price.RegularPrice;
 
@@ -40,7 +40,7 @@ public class Movie {
                 break;
         }
     }
-
+    
     public double getCharge(final int daysRented) { // each -> rental
         double thisAmount = 0;
         switch (_priceCode) { // 取得影片出租价格

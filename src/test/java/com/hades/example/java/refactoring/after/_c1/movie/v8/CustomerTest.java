@@ -1,5 +1,8 @@
 package com.hades.example.java.refactoring.after._c1.movie.v8;
 
+import com.hades.example.java.refactoring.after._c1.movie.v8.Customer;
+import com.hades.example.java.refactoring.after._c1.movie.v8.Movie;
+import com.hades.example.java.refactoring.after._c1.movie.v8.Rental;
 import org.junit.Assert;
 import org.junit.Test;
 
