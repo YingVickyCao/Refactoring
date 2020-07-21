@@ -1,4 +1,4 @@
-package com.hades.example.java.refactoring.after._c1.movie.v1;
+package com.hades.example.java.refactoring.after._c1.movie.v3;
 
 import java.util.Enumeration;
 import java.util.Vector;
@@ -26,7 +26,7 @@ public class Customer {
         String result = "Rental Record for " + getName() + "\n";
         while (rentals.hasMoreElements()) {
             Rental each = (Rental) rentals.nextElement(); // 取得一笔租借记。
-            double thisAmount = amountFor(each);
+            double thisAmount = each.getCharge(each);
             // add frequent renter points （累计常客积点。
             frequentRenterPoints++;
             // add bonus for a two day new release rental
@@ -34,31 +34,12 @@ public class Customer {
                 frequentRenterPoints++;
             }
             // show figures for this rental（显示此笔租借记录）
-            result += "\t" + each.getMovie().getTitle() + "\t" + thisAmount + "\n";
-            totalAmount += thisAmount;
+            result += "\t" + each.getMovie().getTitle() + "\t" + each.getCharge(each) + "\n";
+            totalAmount += each.getCharge(each);
         }
         // add footer lines（结尾打印）
         result += "Amount owed is " + totalAmount + "\n";
         result += "You earned " + frequentRenterPoints + " frequent renter points";
         return result;
-    }
-    private double amountFor(Rental each) { // each -> rental
-        double thisAmount = 0;
-        switch (each.getMovie().getPriceCode()) { // 取得影片出租价格
-            case Movie.REGULAR: // 普通片
-                thisAmount += 2;
-                if (each.getDaysRented() > 2)
-                    thisAmount += (each.getDaysRented() - 2) * 1.5;
-                break;
-            case Movie.NEW_RELEASE: // 新片
-                thisAmount += each.getDaysRented() * 3;
-                break;
-            case Movie.CHILDRENS: // 儿童。
-                thisAmount += 1.5;
-                if (each.getDaysRented() > 3)
-                    thisAmount += (each.getDaysRented() - 3) * 1.5;
-                break;
-        }
-        return thisAmount;
     }
 }
