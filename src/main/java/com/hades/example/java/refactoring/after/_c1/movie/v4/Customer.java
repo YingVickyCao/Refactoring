@@ -1,4 +1,4 @@
-package com.hades.example.java.refactoring.after._c1.movie.v3;
+package com.hades.example.java.refactoring.after._c1.movie.v4;
 
 import java.util.Enumeration;
 import java.util.Vector;
@@ -26,16 +26,12 @@ public class Customer {
         String result = "Rental Record for " + getName() + "\n";
         while (rentals.hasMoreElements()) {
             Rental each = (Rental) rentals.nextElement(); // 取得一笔租借记。
-            // add frequent renter points （累计常客积点。
-            frequentRenterPoints++;
-            // add bonus for a two day new release rental
-            if ((each.getMovie().getPriceCode() == Movie.NEW_RELEASE) && each.getDaysRented() > 1) {
-                frequentRenterPoints++;
-            }
+            frequentRenterPoints = each.getFrequentRenterPoints();
             // show figures for this rental（显示此笔租借记录）
             result += "\t" + each.getMovie().getTitle() + "\t" + each.getCharge(each) + "\n";
             totalAmount += each.getCharge(each);
         }
+
         // add footer lines（结尾打印）
         result += "Amount owed is " + totalAmount + "\n";
         result += "You earned " + frequentRenterPoints + " frequent renter points";

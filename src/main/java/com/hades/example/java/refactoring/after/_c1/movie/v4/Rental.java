@@ -1,4 +1,4 @@
-package com.hades.example.java.refactoring.after._c1.movie.v3;
+package com.hades.example.java.refactoring.after._c1.movie.v4;
 
 public class Rental {
     private Movie _movie; // 影片
@@ -35,5 +35,17 @@ public class Rental {
                 break;
         }
         return thisAmount;
+    }
+
+    public int getFrequentRenterPoints() {
+        int frequentRenterPoints = 0;
+        // add frequent renter points （累计常客积点。
+        frequentRenterPoints++;
+
+        // add bonus for a two day new release rental
+        if ((getMovie().getPriceCode() == Movie.NEW_RELEASE) && getDaysRented() > 1) {
+            frequentRenterPoints++;
+        }
+        return frequentRenterPoints;
     }
 }
