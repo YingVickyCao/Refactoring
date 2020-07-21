@@ -1,6 +1,6 @@
 package com.hades.example.java.refactoring.after._c1.movie.v9;
 
-import com.hades.example.java.refactoring.after._c1.movie.v9.price.AbstractPrice;
+import com.hades.example.java.refactoring.after._c1.movie.v9.price.Price;
 import com.hades.example.java.refactoring.after._c1.movie.v9.price.ChildrenPrice;
 import com.hades.example.java.refactoring.after._c1.movie.v9.price.NewReleasePrice;
 import com.hades.example.java.refactoring.after._c1.movie.v9.price.RegularPrice;
@@ -12,7 +12,7 @@ public class Movie {
 
     private String _title;
     private int _priceCode;
-    private AbstractPrice _price;
+    private Price _price;
 
     public Movie(String title, int priceCode) {
         _title = title;
@@ -20,7 +20,7 @@ public class Movie {
     }
 
     public int getPriceCode() {
-        return _price.getPrice();
+        return _price.getPriceCode();
     }
 
     public String getTitle() {
