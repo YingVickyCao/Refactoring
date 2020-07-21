@@ -21,6 +21,9 @@ public abstract class Price {
                 if (daysRented > 3)
                     thisAmount += (daysRented - 3) * 1.5;
                 break;
+
+            default:
+                throw new IllegalArgumentException("Incorrect Price Code");
         }
         return thisAmount;
     }
