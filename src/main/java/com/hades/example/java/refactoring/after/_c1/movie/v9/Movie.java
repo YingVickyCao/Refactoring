@@ -44,7 +44,7 @@ public class Movie {
     }
 
     public int getFrequentRenterPoints(final int daysRented) {
-        if ((getPriceCode() == com.hades.example.java.refactoring.after._c1.movie.v8.Movie.NEW_RELEASE) && daysRented > 1) {
+        if ((getPriceCode() == Movie.NEW_RELEASE) && daysRented > 1) {
             return 2;
         } else {
             return 1;
