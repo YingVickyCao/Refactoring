@@ -40,7 +40,7 @@ public class Movie {
                 break;
         }
     }
-    
+
     public double getCharge(final int daysRented) { // each -> rental
         double thisAmount = 0;
         switch (_priceCode) { // 取得影片出租价格
@@ -59,5 +59,13 @@ public class Movie {
                 break;
         }
         return thisAmount;
+    }
+
+    public int getFrequentRenterPoints(final int daysRented) {
+        if ((getPriceCode() == Movie.NEW_RELEASE) && daysRented > 1) {
+            return 2;
+        } else {
+            return 1;
+        }
     }
 }

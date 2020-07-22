@@ -42,4 +42,12 @@ public class Movie {
     public double getCharge(final int daysRented) {
         return _price.getCharge(daysRented);
     }
+
+    public int getFrequentRenterPoints(final int daysRented) {
+        if ((getPriceCode() == com.hades.example.java.refactoring.after._c1.movie.v8.Movie.NEW_RELEASE) && daysRented > 1) {
+            return 2;
+        } else {
+            return 1;
+        }
+    }
 }

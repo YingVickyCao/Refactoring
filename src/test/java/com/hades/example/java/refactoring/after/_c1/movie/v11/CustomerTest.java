@@ -1,4 +1,4 @@
-package com.hades.example.java.refactoring.after._c1.movie.v8;
+package com.hades.example.java.refactoring.after._c1.movie.v11;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -95,22 +95,5 @@ public class CustomerTest {
                     "You earned 1 frequent renter points";
             Assert.assertEquals(dest, dest);
         }
-    }
-
-    @Test
-    public void test(){
-        System.out.println(getFrequentRenterPoints(1));
-    }
-
-    public int getFrequentRenterPoints(final int daysRented) {
-        int frequentRenterPoints = 0;
-        // add frequent renter points （累计常客积点。
-        frequentRenterPoints++;
-
-        // add bonus for a two day new release rental
-
-
-        frequentRenterPoints++;
-        return frequentRenterPoints;
     }
 }

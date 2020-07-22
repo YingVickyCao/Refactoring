@@ -1,9 +1,9 @@
-package com.hades.example.java.refactoring.after._c1.movie.v10;
+package com.hades.example.java.refactoring.after._c1.movie.v11;
 
-import com.hades.example.java.refactoring.after._c1.movie.v10.price.ChildrenPrice;
-import com.hades.example.java.refactoring.after._c1.movie.v10.price.NewReleasePrice;
-import com.hades.example.java.refactoring.after._c1.movie.v10.price.Price;
-import com.hades.example.java.refactoring.after._c1.movie.v10.price.RegularPrice;
+import com.hades.example.java.refactoring.after._c1.movie.v11.price.ChildrenPrice;
+import com.hades.example.java.refactoring.after._c1.movie.v11.price.NewReleasePrice;
+import com.hades.example.java.refactoring.after._c1.movie.v11.price.Price;
+import com.hades.example.java.refactoring.after._c1.movie.v11.price.RegularPrice;
 
 public class Movie {
     public static final int REGULAR = 0;
@@ -39,16 +39,7 @@ public class Movie {
                 break;
         }
     }
-
     public double getCharge(final int daysRented) {
         return _price.getCharge(daysRented);
-    }
-
-    public int getFrequentRenterPoints(final int daysRented) {
-        if ((getPriceCode() == com.hades.example.java.refactoring.after._c1.movie.v8.Movie.NEW_RELEASE) && daysRented > 1) {
-            return 2;
-        } else {
-            return 1;
-        }
     }
 }
