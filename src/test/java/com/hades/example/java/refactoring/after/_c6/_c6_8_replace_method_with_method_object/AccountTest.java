@@ -1,6 +1,4 @@
 package com.hades.example.java.refactoring.after._c6._c6_8_replace_method_with_method_object;
-
-import com.hades.example.java.refactoring.before._c6._c6_8_replace_method_with_method_object.Account;
 import org.junit.Assert;
 import org.junit.Test;
 
