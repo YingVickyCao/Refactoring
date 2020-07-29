@@ -1,4 +1,4 @@
-package com.hades.example.java.refactoring.after._c7_1_move_method;
+package com.hades.example.java.refactoring.after._c7._c7_1_move_method;
 
 public class Account {
     //  有几种账户，每一种账户都一个自己都透支金额计费规则

@@ -1,4 +1,4 @@
-package com.hades.example.java.refactoring.after._c7_1_move_method;
+package com.hades.example.java.refactoring.after._c7._c7_1_move_method;
 
 public class AccountType {
     boolean _isPremium;
