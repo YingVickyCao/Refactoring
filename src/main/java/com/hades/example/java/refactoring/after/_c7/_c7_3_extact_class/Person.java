@@ -8,11 +8,11 @@ public class Person {
         return _name;
     }
 
-    String getOfficeAreaCode() {
+    String getTelephoneNumber() {
         return _telephoneNumber.getTelephoneNumber();
     }
 
-    TelephoneNumber getTelephoneNumber() {
+    TelephoneNumber getTelephone() {
         return _telephoneNumber;
     }
 }

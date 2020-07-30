@@ -7,7 +7,7 @@ public class PersonTest {
     @Test
     public void getTelephoneNumber() {
         Person person = new Person();
-        TelephoneNumber telephoneNumber = person.getTelephoneNumber();
+        TelephoneNumber telephoneNumber = person.getTelephone();
         telephoneNumber.setOfficeAreaCode("+86");
         telephoneNumber.setOfficeNumber("12345678");
         Assert.assertEquals("(+86) 12345678", person.getTelephoneNumber());
