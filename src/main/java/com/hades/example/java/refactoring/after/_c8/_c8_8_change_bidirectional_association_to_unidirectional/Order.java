@@ -17,7 +17,6 @@ public class Order {
     double getDiscountedPrice(Customer customer) {
         return getCrossPrice() * (1 - customer.getDiscount());
     }
-
     double getCrossPrice() {
         return 255;
     }
