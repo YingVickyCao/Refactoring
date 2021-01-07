@@ -1,12 +1,12 @@
 package com.hades.example.java.refactoring.before._c8._c8_14_replace_type_code_with_subclasses;
 
-public class Employee {
+public class Course {
     private int _type;
-    static final int ENGINEER = 0;
-    static final int SALESMAN = 1;
-    static final int MANAGER = 2;
+    static final int MATH = 0;
+    static final int ENGLISH = 1;
+    static final int MEDIA = 2;
 
-    public Employee(int type) {
+    public Course(int type) {
         _type = type;
     }
 
@@ -14,13 +14,13 @@ public class Employee {
         return _type;
     }
 
-    int getTotalVocationDay() {
+    int getHours() {
         switch (_type) {
-            case ENGINEER:
+            case MATH:
                 return 15;
-            case MANAGER:
+            case MEDIA:
                 return 17;
-            case SALESMAN:
+            case ENGLISH:
                 return 16;
             default:
                 return 10;

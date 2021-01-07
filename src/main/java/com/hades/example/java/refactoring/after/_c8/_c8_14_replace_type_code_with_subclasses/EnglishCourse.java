@@ -1,17 +1,17 @@
 package com.hades.example.java.refactoring.after._c8._c8_14_replace_type_code_with_subclasses;
 
-public class Manager extends Employee{
-    protected Manager() {
+public class EnglishCourse extends Course {
+    protected EnglishCourse() {
         super();
     }
 
     @Override
     public int getType() {
-        return Employee.MANAGER;
+        return Course.ENGLISH;
     }
 
     @Override
-    public int getTotalVocationDay() {
-        return 17;
+    public int getHours() {
+        return 16;
     }
 }

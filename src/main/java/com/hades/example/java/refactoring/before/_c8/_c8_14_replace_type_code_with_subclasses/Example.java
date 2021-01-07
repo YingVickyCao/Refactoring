@@ -2,16 +2,16 @@ package com.hades.example.java.refactoring.before._c8._c8_14_replace_type_code_w
 
 public class Example {
     public static void main(String[] args) {
-        Employee employee = new Employee(Employee.SALESMAN);
-        System.out.println(employee.getType());
-        System.out.println(employee.getTotalVocationDay());
+        Course course = new Course(Course.ENGLISH);
+        System.out.println(course.getType());
+        System.out.println(course.getHours());
 
-        Employee employee2 = new Employee(Employee.MANAGER);
-        System.out.println(employee2.getType());
-        System.out.println(employee2.getTotalVocationDay());
+        Course course2 = new Course(Course.MEDIA);
+        System.out.println(course2.getType());
+        System.out.println(course2.getHours());
 
-        Employee employee3 = new Employee(Employee.ENGINEER);
-        System.out.println(employee3.getType());
-        System.out.println(employee3.getTotalVocationDay());
+        Course course3 = new Course(Course.MATH);
+        System.out.println(course3.getType());
+        System.out.println(course3.getHours());
     }
 }
