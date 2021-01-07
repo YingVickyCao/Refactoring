@@ -21,6 +21,7 @@ public abstract class Course {
     protected Course() {
     }
 
+    // 宿主类有一个不可变的类型码，它会影响该类的行为
     public abstract int getType();
 
     public abstract int getHours();
